@@ -1,0 +1,4 @@
+['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
+1290 1730
+['Braga', 'Guimaraes', 'Lamego', 'Viseu', 'Covilha', 'Castelo Branco', 'Santarem', 'Lisboa', 'Santarem', 'Leiria', 'Coimbra', 'Agueda', 'Porto', 'Braga']
+3303 9696
