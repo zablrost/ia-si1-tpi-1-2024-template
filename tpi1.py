@@ -1,11 +1,10 @@
 #STUDENT NAME:
 #STUDENT NUMBER:
 
-#DISCUSSED TPI1 WITH (names and numbers):
+#DISCUSSED TPI-1 WITH: (names and numbers):
 
-import math
+
 from tree_search import *
-#from blocksworld import *
 
 class OrderDelivery(SearchDomain):
 
@@ -44,7 +43,7 @@ class OrderDelivery(SearchDomain):
  
 class MyNode(SearchNode):
 
-    def __init__(self,state,parent,arg3=None,arg4=None,arg5=None):
+    def __init__(self,state,parent,arg3=None,arg4=None,arg5=None,arg6=None):
         super().__init__(state,parent)
         #ADD HERE ANY CODE YOU NEED
 

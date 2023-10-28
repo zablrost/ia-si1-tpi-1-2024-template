@@ -65,12 +65,27 @@ city_coordinates = {  # City coordinates
 
 cidades_portugal = Cidades(city_connections,city_coordinates)
 
-
 p = SearchProblem(cidades_portugal,'Braga','Faro')
-t = MyTree(p,'breadth',2000)
 
+t = MyTree(p,'depth')
 print(t.search2())
-print(t.non_terminals,t.terminals)
+print('non_terminals=',t.non_terminals,'terminals=',t.terminals)
+n = t.solution
+print('solution : depth=',n.depth,'cost=',n.cost,'heuristic=',n.heuristic,'eval=',n.eval)
+n = t.open_nodes[-1]
+print('last leaf: depth=',n.depth,'cost=',n.cost,'heuristic=',n.heuristic,'eval=',n.eval)
+print('\n')
+
+
+t = MyTree(p,'A*')
+print(t.search2())
+print('non_terminals=',t.non_terminals,'terminals=',t.terminals)
+n = t.solution
+print('solution : depth=',n.depth,'cost=',n.cost,'heuristic=',n.heuristic,'eval=',n.eval)
+n = t.open_nodes[-1]
+print('last leaf: depth=',n.depth,'cost=',n.cost,'heuristic=',n.heuristic,'eval=',n.eval)
+print('\n')
+
 
 
 # -----
@@ -78,18 +93,6 @@ print(t.non_terminals,t.terminals)
 
 orderdelivery_portugal = OrderDelivery(city_connections,city_coordinates)
 
-initial = ('Braga',set({}))
-goal = ('Braga',{'Lamego','Coimbra','Covilha','Lisboa'})
-
-p = SearchProblem(orderdelivery_portugal,initial,goal)
-#t = SearchTree(p,'breadth')
-#t = SearchTree(p,'depth')
-#t = SearchTree(p,'greedy')
-t = MyTree(p,'A*',13000)
-
-solution = t.search2()
-print([s[0] for s in solution])
-print(t.non_terminals,t.terminals)
 
 
 
